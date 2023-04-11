@@ -1,0 +1,18 @@
+.form-music{
+  background-color: #171b21;
+}
+
+label{
+  color: white;
+}
+
+.form-design-2{
+  padding: 30px;
+  background-color: #2a303c;
+  border-radius: 10px;
+}
+
+
+input[type='file']{
+  margin-bottom: 10px;
+}

@@ -1,0 +1,144 @@
+<div class="page-container w-full">
+  <div class="flex justify-center form-music">
+    <div class="form-design">
+      <form class="max-w-fit form-design-2 mt-20" [formGroup]="form" (ngSubmit)="submitForm()">
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="title">
+              Titre de la chanson
+            </label>
+            <input type="text" formControlName="title" placeholder="Type here" id="title" class="input input-bordered w-full max-w-xs" />
+          </div>
+
+          <div class="w-full md:w-1/3 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="style">
+              Style
+            </label>
+
+            <select id="style" formControlName="style" class="select select-bordered w-full max-w-xs">
+              <option disabled selected>Who shot first?</option>
+              <option>Han Solo</option>
+              <option>Greedo</option>
+            </select>
+          </div>
+
+          <div class="w-full md:w-1/3 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="category">
+              Catégorie
+            </label>
+
+            <select id="category" formControlName="category" class="select select-bordered w-full max-w-xs">
+              <option disabled selected>Who shot first?</option>
+              <option>Han Solo</option>
+              <option>Greedo</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="description">
+              Description
+            </label>
+            <textarea formControlName="description" id="description" class="textarea textarea-bordered w-full" placeholder="Bio"></textarea>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="paroles">
+              paroles
+            </label>
+            <textarea formControlName="paroles" id="paroles" class="textarea textarea-bordered w-full"  placeholder="Paroles"></textarea>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="extrait">
+              Extrait Créatoke
+            </label>
+            <input formControlName="extrait" (change)="onFileSelect($event)" id="extrait" type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs"  />
+          </div>
+
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="complete">
+              Musique complète
+            </label>
+            <input formControlName="full_music" type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs" id="complete" />
+          </div>
+
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="creatoke">
+              Creatoke
+            </label>
+            <input formControlName="creatoke" type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs" id="creatoke" />
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="img">
+              Image de la chanson
+            </label>
+            <input formControlName="image" type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs" id="img" />
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="prix">
+              Prix
+            </label>
+            <input formControlName="prix" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" id="prix"/>
+          </div>
+
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="auteur">
+              Auteur
+            </label>
+            <input formControlName="auteur" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" id="auteur" />
+          </div>
+        </div>
+
+
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="ytb">
+              Youtube URL
+            </label>
+            <input formControlName="youtube" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" id="ytb" />
+          </div>
+
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="spotify">
+              Spotify
+            </label>
+            <input formControlName="spotify" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" id="spotify"/>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text pr-5">Mettre dans les favoris</span>
+              <input formControlName="isHighlighted" type="checkbox"  class="checkbox checkbox-error" />
+            </label>
+          </div>
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text pr-5">Publier sur le site</span>
+              <input formControlName="isOnline" type="checkbox"  class="checkbox checkbox-error" />
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+          Enregistrer
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>

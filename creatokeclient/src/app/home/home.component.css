@@ -1,0 +1,120 @@
+.top1{
+  height: 70vh;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1)), url("/assets/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.intro{
+  padding-top: 300px;
+}
+
+.intro form{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+ul > li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.searching-input{
+  background-color: white;
+}
+
+.title-container{
+  width: 50%;
+}
+
+.music-card-recommend{
+  width: 250px;
+  height: 300px;
+  padding: 30px;
+}
+
+.title{
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  line-height: 1.03;
+  color: #fff;
+  letter-spacing: -.4px;
+}
+
+.content-playlist-title{
+  padding: 10px;
+}
+
+.recommend{
+  display: flex;
+  justify-content: center;
+}
+
+.rounded-box{
+  height: 300px;
+  width: 100%;
+}
+
+.music-trending{
+  background-color: black;
+}
+
+/**** AUDIO PLAYER CUSTOM ***/
+
+.audio-player{
+  height: 70px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+
+.player-controls-media{
+  display: flex;
+  align-items: center;
+}
+
+
+.icon-audio{
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 28px;
+}
+
+.mini-img-music{
+  width: 60px;
+  height: 60px;
+}
+
+
+.content-music-info{
+  margin-left: 30px;
+}
+
+.left-content-audio{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.price-music{
+  padding-left: 20px;
+}
+
+.price{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.audio-controls{
+
+}
